@@ -1,0 +1,30 @@
+fonction binome(a,b;réel ,n:entier) : réel
+début
+    s <-- 0
+    pour i de 0 à n-1 faire
+        s <-- s + Comb(n,i)*puissance(a,n-i)*puissance(b,i)
+    fin_pour
+fin
+
+fonction puissance(x:réel,p:entier) : réel
+début
+    res = 1
+    pour i de 1 à p faire
+        res *= x
+    fin_pour
+    retourner res
+fin
+
+fonction Comb(n,p) : réel
+début
+    retourner fact(n)/(fact(p)*fact(n-p))
+fin
+
+fonction fact(x) : entier
+début
+    res <-- 1
+    pour i de 1 à x faire
+        res <-- res * i
+    fin_pour
+    retourner res
+fin
