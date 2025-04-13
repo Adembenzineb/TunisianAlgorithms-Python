@@ -1,0 +1,17 @@
+fonction Somme(x,a:réel,n:entier) : réel
+début
+    s <-- 0
+    sig <-- 1
+    pour i de 1 à n pas 2 faire
+        s <-- s + ( puissance(x*i)/ puissance(a*i-1) ) * sig
+        sig <-- sig * (-1)
+    fin_pour
+fin
+fonction puissance(int:reel,p:entier) : réel
+début
+    sp <-- 1
+    pour i de 1 à p faire
+        sp <-- sp * int
+    fin_pour
+    retourner sp
+fin
