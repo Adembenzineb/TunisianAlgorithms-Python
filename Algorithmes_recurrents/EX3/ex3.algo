@@ -1,0 +1,22 @@
+fonction Somme_calc(n:entier) : entier
+début
+    y <-- 0
+    sig <-- 1
+    pour i de 0 à n faire
+        y <-- y + Comb(n,i) * sig
+        sig <-- sig * (-1)
+    fin_pour
+    retourner y
+fin
+fonction Comb(n,p) : entier
+début
+    retourner fact(n)/(fact(p)*fact(n-p))
+fin
+fonction fact(x) : entier
+début
+    res <-- 1
+    pour i de 1 à x faire
+        res <-- res * i
+    fin_pour
+    retourner res
+fin
