@@ -1,0 +1,15 @@
+onction perpond(pas : réel) : réel
+début
+    x <-- 0
+    xm <-- 0
+    sm <-- 0
+    répéter
+        x <-- x + pas
+        s <-- 5*x*x - 10*x + 25
+        si s > sm alors
+            sm <-- s
+            xm <-- x
+        fin_si
+    jusqu'à  x > 5
+    retourner xm
+fin

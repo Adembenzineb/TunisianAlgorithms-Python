@@ -5,6 +5,8 @@ def Somme_calc(n):
         y += Comb(n,i) * sig
         sig *= -1
     return y
+
+    
 def Comb(n,p):return fact(n)/(fact(p)*fact(n-p))
 
 def fact (x):

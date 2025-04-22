@@ -1,0 +1,15 @@
+fonction Valeur(pas : réel) : réel
+début
+    x <-- 0
+    xm <-- 0
+    vm <-- 0
+    répéter
+        x <-- x + pas
+        v <-- (10- 2*x)*(10-2*x)*x
+        si v > vm alors
+            vm <-- v
+            xm <-- x
+        fin_si
+    jusqu'à  x > 5
+    retourner xm
+fin

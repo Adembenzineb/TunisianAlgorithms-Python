@@ -1,0 +1,15 @@
+fonction Chercher(pas : réel) : réel
+début
+    x <-- 0
+    xm <-- 0
+    Am <-- 0
+    répéter
+        x <-- x + pas
+        A <-- -2/3*x*x + 2*x
+        si abs(1-A) < abs(1-Am) alors
+            Am <-- A
+            xm <-- x
+        fin_si
+    jusqu'à  x > 2 
+    retourner xm
+fin
